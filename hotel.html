@@ -1,11 +1,33 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>Cprg Travel</title>
-<script type="text/javascript" src="travel.js"></script>
-<link href="travel.css" rel="stylesheet"></link>
-</head>
-<body>
+    <head>
+    <title>Cprg Travel</title>
+    <script type="text/javascript" src="travel.js"></script>
+    <link href="travel.css" rel="stylesheet"></link>
+    <style>
+            table,tr,td{
+                border: 1px solid black;
+                text-align: center;
+                margin-left: auto;
+                margin-right: auto;
+            }
+    </style>
+    <script type="text/javascript" >
+    //The function should write html onto an alert
+    //But it does not.
+    // Must fix this later
+
+        function almostDone(){
+            var message = "";
+            message += "<h1>Almost Done</h1>"
+            message += "<p>Would you like to add a rental car?</p>"
+            message +="<button onclick=\"yesClick()\">Yes</button>"
+            message +="<button onclick=\"noClick()\">No</button>"
+            alert(message);
+        }
+    </script>
+    </head>
+    <body>
 	<!----this is the "suitcase" dropdown menu---->
 		<div class="dropdown">
 		  <input type="image" src="images/suitcase.png" height=50px width=50px></button>
@@ -23,11 +45,16 @@
         they are three separate tables for the padding later -->
         <table>
             <tr>
+                <td><button>Filter</button></td>
+            </tr>
+        </table>
+        <table>
+            <tr>
                 <td>HOTEL LOGO</td>
                 <td><p>Address  3 stars</p>
                 <p><button>Contact Info</button></p></td>
                 <td><p>Total</p>
-                    <p>$150 per night<button>BOOK</button></p>
+                    <p>$150 per night<button onclick="almostDone()">BOOK</button></p>
                 </td>
             </tr>
         </table>
@@ -37,7 +64,7 @@
                 <td><p>Address  2 stars</p>
                 <p><button>Contact Info</button></p></td>
                 <td><p>Total</p>
-                    <p>$150 per night<button>BOOK</button></p>
+                    <p>$150 per night<button onclick="almostDone()">BOOK</button></p>
                 </td>
             </tr>
         </table>
@@ -47,9 +74,9 @@
                 <td><p>Address  4 stars</p>
                 <p><button>Contact Info</button></p></td>
                 <td><p>Total</p>
-                    <p>$150 per night<button>BOOK</button></p>
+                    <p>$150 per night<button onclick="almostDone()">BOOK</button></p>
                 </td>
             </tr>
         </table>
-</body>
+    </body>
 </html>        
