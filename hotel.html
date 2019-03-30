@@ -5,12 +5,78 @@
     <script type="text/javascript" src="travel.js"></script>
     <link href="travel.css" rel="stylesheet"></link>
     <style>
-            table,tr,td{
-                border: 1px solid black;
-                text-align: center;
-                margin-left: auto;
-                margin-right: auto;
-            }
+    /* This is used to make the background azure */
+    body{
+        background: azure;
+
+    }    
+    /* this is to make the borders and center a table */
+    table,tr,td{
+        border: 3px solid black;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        table-layout: fixed ;
+        width: 200px; 
+    }
+    /* this is to make the heading more pronounced */
+    .total{
+        font-weight: 600;
+        text-decoration: underline;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 20px;
+        padding: 5px;
+    }
+    /* I made this class because just calling button did not work 
+    It aims to make the button prettier*/
+    .myButton{
+        padding: 8 px;
+        font-weight: 100;
+        font-size: 16px;
+        text-decoration: underline;
+        font-family: fantasy;
+        background-color: rgb(206, 241, 241);
+        width: 60px;
+        border-color: azure;
+    }
+    /* the button font goes red and the background goes yellow
+    Also it gets bigger */
+    .myButton:hover{
+        color: red;
+        font-size: 25px;
+        background: rgb(243, 243, 28);
+        width: 70px;
+        border-color: red;
+    }
+    /* This makes some text slanted */
+    .slanted{
+        transform: rotate(-30deg);
+        font-weight: 600;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    /* This makes the filter buttone a bit bigger*/
+    .filterButton{
+        width: 80px;
+        height: 30px;
+        font-size: 16px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    /* This is the same as my button but without the hover portion*/
+    .contactBtn{
+        padding: 2 px;
+        font-weight: 100;
+        font-size: 16px;
+        text-decoration: underline;
+        font-family: fantasy;
+        background-color: rgb(206, 241, 241);
+        width: 90px;
+        border-color: azure;
+    }
+    .stars{
+        font-weight: 600;
+        font-size: 20px;
+    }
+
     </style>
     <script type="text/javascript" >
     //The function asks the user if he wants a rental car
@@ -21,6 +87,9 @@
             message += "Almost Done!\n"
             message += "Would you like to add a rental car?\n"
             confirm(message);
+            if (confirm) {
+                location.href = "rentalCar.html";
+            }
         }
     </script>
     </head>
@@ -42,36 +111,42 @@
         they are three separate tables for the padding later -->
         <table>
             <tr>
-                <td><button>Filter</button></td>
+                <td><button class = "filterButton">Filter</button></td>
             </tr>
         </table>
         <table>
             <tr>
-                <td>HOTEL LOGO</td>
-                <td><p>Address  ***</p>
-                <p><button>Contact Info</button></p></td>
-                <td><p>Total</p>
-                    <p>$150 per night<button onclick="almostDone()">BOOK</button></p>
+                <td><p class="slanted">HOTEL LOGO</p></td>
+                <td><p class="slanted">Address </p>
+                    <p class="stars">***</p>
+                <p><button class="contactBtn">Contact Info</button></p></td>
+                <td><p class="total">Total</p>
+                    <p class="slanted">$150 per night</p>
+                    <button  class="myButton" onclick="almostDone()">BOOK</button>
                 </td>
             </tr>
         </table>
         <table>
             <tr>
-                <td>HOTEL LOGO</td>
-                <td><p>Address  **</p>
-                <p><button>Contact Info</button></p></td>
-                <td><p>Total</p>
-                    <p>$150 per night<button onclick="almostDone()">BOOK</button></p>
+                <td><p class="slanted">HOTEL LOGO</p></td>
+                <td><p  class="slanted">Address</p>
+                    <p class="stars">**</p>
+                <p><button class="contactBtn">Contact Info</button></p></td>
+                <td><p class="total">Total</p>
+                    <p  class="slanted">$150 per night</p>
+                    <button class="myButton" onclick="almostDone()">BOOK</button>
                 </td>
             </tr>
         </table>
         <table>
             <tr>
-                <td>HOTEL LOGO</td>
-                <td><p>Address  ****</p>
-                <p><button>Contact Info</button></p></td>
-                <td><p>Total</p>
-                    <p>$150 per night<button onclick="almostDone()">BOOK</button></p>
+                <td><p class="slanted">HOTEL LOGO</p></td>
+                <td><p class="slanted">Address</p>
+                    <p class="stars">****</p>
+                <p><button class="contactBtn">Contact Info</button></p></td>
+                <td><p class="total">Total</p>
+                    <p class="slanted">$150 per night</p>
+                    <button class="myButton" onclick="almostDone()">BOOK</button>
                 </td>
             </tr>
         </table>
