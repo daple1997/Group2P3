@@ -1,22 +1,46 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<title>Cprg Travel</title>
-<script type="text/javascript" src="travel.js"></script>
-<link href="travel.css" rel="stylesheet"></link>
+    <title>Cprg Travel</title>
+    <script type="text/javascript" src="travel.js"></script>
+    <link href="travel.css" rel="stylesheet">
+    </link>
 </head>
+
 <body>
-	<!----this is the "suitcase" dropdown menu---->
-		<div class="dropdown">
-		  <input type="image" src="images/suitcase.png" height=50px width=50px></button>
-		  <div class="dropdown-content">
-            <a href="#">Home</a>
-			<a href="#">Log-in/Sign-up</a>
-			<a href="#">Deals</a>
-			<a href="#">Booked trips</a>
-            <a href="#">Random trips</a>
-            <a href="#">About</a>
-		  </div>
-		</div>
-		<h1 align="center">CPRG TRAVEL</h1>
+    <!----this is the "suitcase" dropdown menu---->
+    <div class="title-image">
+        <div class="title-text">
+          <h1><bold>CPRG TRAVEL</bold></h1>
+          <h1>IRELAND</h1>
+        </div>
+          <div class="dropdown">
+            <input type="image" src="images/suitcase.png" height=50px width=50px></button>
+            <div class="dropdown-content">
+                <a href="#">Home</a>
+                <a href="#">Log-in/Sign-up</a>
+                <a href="#">Deals</a>
+                <a href="#">Booked trips</a>
+                <a href="#">Random trips</a>
+                <a href="#">About</a>
+        </div>
+        </div>
+      </div>
+      <div class="date-title">
+        <h3>Departure Date<img src="images/small-arrow-clipart-images-23.jpg" alt="Arrow" style="width:120px;height:20px;">Return Date</h3>
+      </div>
+      <div class="user-input-calendars">
+          <form id="flightType">
+            Two Way<input type="radio" onclick="javascript:flightType();" name="flightType" id="twoWay"><br>
+            One Way<input type="radio" onclick="javascript:flightType();" name="flightType" id="oneWay"><br>
+            </form>
+        <form id="departDate">
+           <input type="date" name="depart">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <form id="returnDate" style="visibility:hidden">
+            <input type="date" name="return">
+          </form>
+        </form>
+        <input type="button" value="Explore Flights!" onclick="submitForms()"/>
+      </div>
 </body>
